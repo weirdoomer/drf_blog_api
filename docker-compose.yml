@@ -16,10 +16,10 @@ services:
   db:
     image: postgres:14.9-alpine
     # Внешний том(volume) и место где он будет подключен внутри контейнера
-    volumes:
-      - postgres_volume:/var/lib/postgresql/data/
     env_file:
       - ./.env.db
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data/
 
 volumes:
   postgres_volume:

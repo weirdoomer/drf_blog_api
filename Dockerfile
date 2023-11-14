@@ -14,6 +14,6 @@ RUN pip install -r requirements.txt
 ARG uid
 ARG username
 
-RUN useradd -s /bin/bash -u ${uid} -U ${username}  
+RUN useradd -s /bin/bash -u ${uid} -U ${username} -m
 
 USER ${username}
